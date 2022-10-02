@@ -17,7 +17,10 @@ class SuspensionUtil {
       } else if (a.getSuspensionTag() == "#" || b.getSuspensionTag() == "@") {
         return 1;
       } else {
-        return a.getSuspensionTag().compareTo(b.getSuspensionTag());
+        return a
+            .getSuspensionTag()
+            .toUpperCase()
+            .compareTo(b.getSuspensionTag().toUpperCase());
       }
     });
   }
