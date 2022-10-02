@@ -48,7 +48,7 @@ class SuspensionUtil {
     if (list == null || list.isEmpty) return;
     String? tempTag;
     for (int i = 0, length = list.length; i < length; i++) {
-      String tag = list[i].getSuspensionTag();
+      String tag = list[i].getSuspensionTag().toUpperCase();
       if (tempTag != tag) {
         tempTag = tag;
         list[i].isShowSuspension = true;
